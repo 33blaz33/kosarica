@@ -43,3 +43,5 @@ jobs:
           tags: |
             ghcr.io/33blaz33/kosarica:${{ steps.app.outputs.version }}
             ghcr.io/33blaz33/kosarica:latest
+          labels: |
+            org.opencontainers.image.source=https://github.com/33blaz33/kosarica
