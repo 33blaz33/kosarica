@@ -1,6 +1,6 @@
 services:
   kosarica:
-    image: ghcr.io/your-github-username/kosarica:2.0.0
+    image: ghcr.io/33blaz33/kosarica:2.0.0
     restart: unless-stopped
     init: true
     ports:

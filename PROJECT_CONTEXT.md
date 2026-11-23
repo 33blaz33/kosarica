@@ -15,7 +15,7 @@ Last reviewed: 2026-11-20
 - `npm run dev` starts `nodemon app.js`; `npm start` runs `node app.js`.
 - `package-lock.json` is present; use `npm ci` for a reproducible dependency install when deploying from this lockfile.
 - `.env.example` documents the runtime environment variable names with no credentials; the local `.env` is ignored by Git.
-- `Dockerfile`, `.dockerignore`, and `compose.yaml` provide a production container build and TrueNAS Custom App YAML starting point. Compose expects an externally reachable MySQL database and a published image; database initialization is not included because the schema is absent.
+- `Dockerfile`, `.dockerignore`, and `compose.yaml` provide a production container build and TrueNAS Custom App YAML starting point. The image health check sends the forwarded HTTPS header expected by the app's production redirect. Compose expects an externally reachable MySQL database and a published image; database initialization is not included because the schema is absent.
 - No test, lint, or build scripts are currently declared in `package.json`.
 
 ## Structure and flow
