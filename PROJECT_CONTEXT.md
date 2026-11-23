@@ -15,7 +15,7 @@ Last reviewed: 2026-11-20
 - `npm run dev` starts `nodemon app.js`; `npm start` runs `node app.js`.
 - `package-lock.json` is present; use `npm ci` for a reproducible dependency install when deploying from this lockfile.
 - `.env.example` documents the runtime environment variable names with no credentials; the local `.env` is ignored by Git.
-- `Dockerfile`, `.dockerignore`, and `compose.yaml` provide a production container build and TrueNAS Custom App YAML starting point. The image health check sends the forwarded HTTPS header expected by the app's production redirect. Compose expects an externally reachable MySQL database and a published image; database initialization is not included because the schema is absent.
+- `Dockerfile`, `.dockerignore`, and `compose.yaml` provide a production container build and TrueNAS Custom App YAML starting point. Compose uses the mutable `latest` tag published by the workflow so TrueNAS image-digest checks can detect refreshed images. The image health check sends the forwarded HTTPS header expected by the app's production redirect. Compose expects an externally reachable MySQL database and a published image; database initialization is not included because the schema is absent.
 - `.github/workflows/publish-image.yml` builds and publishes versioned and `latest` images to GHCR whenever `main` changes, using GitHub Actions' `GITHUB_TOKEN`. It adds the OCI source label linking the package to this repository.
 - No test, lint, or build scripts are currently declared in `package.json`.
 
