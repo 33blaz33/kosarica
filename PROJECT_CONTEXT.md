@@ -14,6 +14,7 @@ Last reviewed: 2026-11-20
 - Product pages are scraped with `cheerio` and `undici`; periodic tasks use `node-cron`; email uses `nodemailer`.
 - `npm run dev` starts `nodemon app.js`; `npm start` runs `node app.js`.
 - `package-lock.json` is present; use `npm ci` for a reproducible dependency install when deploying from this lockfile.
+- `.env.example` documents the runtime environment variable names with no credentials; the local `.env` is ignored by Git.
 - `Dockerfile`, `.dockerignore`, and `compose.yaml` provide a production container build and TrueNAS Custom App YAML starting point. Compose expects an externally reachable MySQL database and a published image; database initialization is not included because the schema is absent.
 - No test, lint, or build scripts are currently declared in `package.json`.
 
