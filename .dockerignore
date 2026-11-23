@@ -1,0 +1,9 @@
+node_modules
+.env
+.env.*
+.git
+.gitignore
+AGENTS.md
+PROJECT_CONTEXT.md
+stderr.log
+tmp

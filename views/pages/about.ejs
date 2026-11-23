@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="sl">
+<%- include("../partials/head", { title: "O nas" }) %>
+
+  <body class="bg-gray-50 pb-20" data-page="about">
+    <%- include("../partials/header") %>
+      <%- include("../partials/nav", { active }) %>
+
+        <main class="max-w-6xl mx-auto px-4 py-8">
+
+          <!-- Info Card -->
+          <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center">
+            <div class="mt-4 text-sm text-gray-700 space-y-2">
+              <p><strong>Košarica</strong> je aplikacija za sledenje cenam izdelkov iz različnih spletnih trgovin.</p>
+              <p>
+                Na splošno so živila nekoliko ugodnejša v Šparu kot v Mercatorju. V Mercatorju se bolj splača kupovati
+                alkohol,
+                ki je malenkost cenejši, poleg tega pa se lahko ob koncu tedna koristi še -25% popust.
+                Detergente in čistila se bolj splača kupovati preko Mimovrste, ki so skoraj pol cenejši od ostalih
+                trgovin.
+              </p>
+            </div>
+          </div>
+
+          <!-- App Preview Frame -->
+          <div class="mt-6 flex justify-center relative">
+            <!-- Soft background glow -->
+            <div
+              class="absolute inset-0 blur-3xl opacity-20 bg-gradient-to-r from-green-300 via-emerald-200 to-teal-300">
+            </div>
+
+            <div class="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-4 max-w-5xl w-full">
+
+              <!-- Fake browser bar -->
+              <div class="flex items-center gap-2 mb-3 px-2">
+                <span class="w-3 h-3 bg-red-400 rounded-full"></span>
+                <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+                <span class="w-3 h-3 bg-green-400 rounded-full"></span>
+                <div class="ml-4 text-xs text-gray-400 truncate">
+                  kosarica.app – Predogled aplikacije
+                </div>
+              </div>
+
+              <!-- Preview Image -->
+              <div class="overflow-hidden rounded-lg border border-gray-100">
+                <img src="/images/Preview2.png" alt="Predogled aplikacije Košarica"
+                  class="w-full h-auto object-cover" />
+              </div>
+            </div>
+          </div>
+
+          <!-- App Preview Frame -->
+          <div class="mt-6 flex justify-center relative">
+            <!-- Soft background glow -->
+            <div
+              class="absolute inset-0 blur-3xl opacity-20 bg-gradient-to-r from-green-300 via-emerald-200 to-teal-300">
+            </div>
+
+            <div class="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-4 max-w-5xl w-full">
+
+              <!-- Fake browser bar -->
+              <div class="flex items-center gap-2 mb-3 px-2">
+                <span class="w-3 h-3 bg-red-400 rounded-full"></span>
+                <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+                <span class="w-3 h-3 bg-green-400 rounded-full"></span>
+                <div class="ml-4 text-xs text-gray-400 truncate">
+                  kosarica.app – Predogled aplikacije
+                </div>
+              </div>
+
+              <!-- Preview Image -->
+              <div class="overflow-hidden rounded-lg border border-gray-100">
+                <img src="/images/Preview1.png" alt="Predogled aplikacije Košarica"
+                  class="w-full h-auto object-cover" />
+              </div>
+            </div>
+          </div>
+
+          <!-- App Preview Frame -->
+          <div class="mt-6 flex justify-center relative">
+            <!-- Soft background glow -->
+            <div
+              class="absolute inset-0 blur-3xl opacity-20 bg-gradient-to-r from-green-300 via-emerald-200 to-teal-300">
+            </div>
+
+            <div class="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-4 max-w-5xl w-full">
+
+              <!-- Fake browser bar -->
+              <div class="flex items-center gap-2 mb-3 px-2">
+                <span class="w-3 h-3 bg-red-400 rounded-full"></span>
+                <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+                <span class="w-3 h-3 bg-green-400 rounded-full"></span>
+                <div class="ml-4 text-xs text-gray-400 truncate">
+                  kosarica.app – Predogled aplikacije
+                </div>
+              </div>
+
+              <!-- Preview Image -->
+              <div class="overflow-hidden rounded-lg border border-gray-100">
+                <img src="/images/Preview3.png" alt="Predogled aplikacije Košarica"
+                  class="w-full h-auto object-cover" />
+              </div>
+            </div>
+          </div>
+
+        </main>
+
+        <%- include("../partials/footer") %>
+  </body>
+
+</html>

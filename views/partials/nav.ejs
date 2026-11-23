@@ -1,0 +1,20 @@
+<nav class="max-w-6xl mx-auto px-4 mt-4 overflow-auto">
+  <div class="bg-white border border-gray-200 rounded-xl shadow-sm p-1 flex gap-1 w-full sm:w-fit overflow-auto">
+    <a href="/" class="topnav-link <%= active==='home' ? 'active' : '' %>">
+      <i class="fa-solid fa-play"></i><span>Košarica</span>
+    </a>
+
+    <% if (user) { %>
+      <a href="/overview" class="topnav-link <%= active==='overview' ? 'active' : '' %>">
+        <i class="fa-solid fa-list-ul"></i><span>Hitri pregled</span>
+      </a>
+    <% } %>
+
+        <!--<a href="/basket" class="topnav-link <%= active==='basket' ? 'active' : '' %>">
+      <i class="fa-solid fa-trophy"></i><span>Košarica</span>
+    </a>-->
+        <a href="/about" class="topnav-link <%= active==='about' ? 'active' : '' %>">
+          <i class="fa-solid fa-circle-info"></i><span>O nas</span>
+        </a>
+  </div>
+</nav>

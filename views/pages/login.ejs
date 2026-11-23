@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="sl">
+<%- include("../partials/head", { title: "Prijava" }) %>
+
+  <body class="bg-gray-50 min-h-screen">
+
+    <%- include("../partials/header") %>
+
+      <main class="max-w-6xl mx-auto px-4 py-10">
+        <div class="max-w-md mx-auto bg-white border border-gray-200 rounded-xl shadow-sm p-6">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="bg-green-50 text-green-700 p-2 rounded-lg">
+              <i class="fa-solid fa-right-to-bracket text-lg"></i>
+            </div>
+            <div>
+              <h2 class="text-xl font-bold text-gray-900">Prijava</h2>
+              <p class="text-sm text-gray-500">Vpišite podatke za prijavo.</p>
+            </div>
+          </div>
+
+          <form id="login-form" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Uporabniško ime</label>
+              <input id="input-username" name="username" type="text" required
+                class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-200 focus:border-emerald-400">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Geslo</label>
+              <input id="input-password" name="password" type="password" required
+                class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-200 focus:border-emerald-400">
+            </div>
+
+            <button id="btn-login" type="submit"
+              class="w-full rounded-lg bg-emerald-600 text-white font-semibold py-2 hover:bg-emerald-700 transition-colors">
+              Prijava
+            </button>
+
+            <p id="add-error" class="mt-2 text-sm text-red-600 hidden"></p>
+
+            <p class="text-sm text-gray-600 text-center">
+              Nimate računa?
+              <a href="register" class="text-emerald-700 font-medium hover:underline">Registrirajte se</a>
+            </p>
+          </form>
+        </div>
+      </main>
+
+      <script src="/js/login.js"></script>
+  </body>
+
+</html>

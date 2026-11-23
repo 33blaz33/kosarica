@@ -1,0 +1,74 @@
+<!-- views/home.ejs -->
+<!doctype html>
+<html lang="sl">
+<%- include("../partials/head", { title: "Hitri pregled" }) %>
+
+  <body class="bg-gray-50 pb-20" data-page="overview">
+    <%- include("../partials/header") %>
+      <%- include("../partials/nav", { active }) %>
+
+        <main class="max-w-6xl mx-auto px-4 py-3">
+
+          <!-- Sort seznam -->
+          <!-- Sort bar (same look as controls-bar) -->
+          <div class="mb-3">
+            <div class="flex flex-wrap items-center gap-2 justify-end">
+
+
+              <div class="relative w-full sm:flex-1 sm:min-w-[280px]">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                </div>
+
+                <input type="text" id="name-input" placeholder="Iskanje po nazivu izdelka"
+                  class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:ring-1 focus:ring-emerald-500 focus:outline-none" />
+              </div>
+
+
+              <div class="flex items-center space-x-2">
+                <span class="text-sm text-gray-500 whitespace-nowrap">
+                  <i class="fa-solid fa-arrow-down-up mr-1"></i> Razvrsti po:
+                </span>
+
+                <select id="sort-select"
+                  class="block pl-3 pr-8 py-1.5 text-sm border-gray-300 rounded-md border bg-white focus:outline-none focus:border-emerald-500">
+                  <option value="name_asc" selected>Ime</option>
+                  <option value="store_asc">Trgovina (A–Ž)</option>
+                  <option value="store_desc">Trgovina (Ž–A)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Seznam najcenejših izdelkov -->
+          <div id="product-list" class="space-y-2">
+            <!-- Loading card -->
+            <div id="loading-screen"
+              class="hidden md:col-span-2 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div class="flex items-center justify-center gap-3 text-gray-700">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                <span class="font-medium">Nalagam izdelke…</span>
+              </div>
+            </div>
+
+            <!-- Products injected here -->
+          </div>
+
+          <div id="empty-state"
+            class="hidden text-center py-12 px-4 rounded-xl border-2 border-dashed border-gray-300 bg-gray-50">
+            <i class="fa-solid fa-bag-shopping mx-auto text-5xl text-gray-300 mb-3 block"></i>
+            <h3 class="text-lg font-medium text-gray-900">Vaš seznam je prazen</h3>
+            <p class="mt-1 text-sm text-gray-500">Začnite z vnosom URL naslova izdelka zgoraj.</p>
+          </div>
+
+        </main>
+
+
+        <script type="module" src="/js/overview.js"></script>
+
+        <%- include("../partials/footer") %>
+  </body>
+
+</html>

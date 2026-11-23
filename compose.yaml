@@ -1,0 +1,20 @@
+services:
+  kosarica:
+    image: ghcr.io/your-github-username/kosarica:2.0.0
+    restart: unless-stopped
+    init: true
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: production
+      PORT: "4000"
+      SESSION_SECRET: "REPLACE_WITH_A_LONG_RANDOM_SECRET"
+      DB_HOST: "REPLACE_WITH_MYSQL_HOSTNAME_OR_IP"
+      DB_USER: "REPLACE_WITH_DATABASE_USERNAME"
+      DB_PASS: "REPLACE_WITH_DATABASE_PASSWORD"
+      DB_NAME: "REPLACE_WITH_DATABASE_NAME"
+      SMTP_HOST: "REPLACE_WITH_SMTP_HOST"
+      SMTP_PORT: "465"
+      SMTP_USER: "REPLACE_WITH_SMTP_USERNAME"
+      SMTP_PASS: "REPLACE_WITH_SMTP_PASSWORD"
+      DOMAIN: "REPLACE_WITH_PUBLIC_HOSTNAME"

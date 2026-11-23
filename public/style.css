@@ -1,0 +1,75 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.chart-container {
+    position: relative;
+    height: 150px;
+    width: 100%;
+}
+
+/* Keep CSS minimal (your look is mostly Tailwind) */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Small underline links like in your example */
+.link-underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Menu: subtle segmented control (matches your btn-refresh-all vibe) */
+.topnav-link{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.55rem .95rem;
+  border-radius:.75rem;
+  font-size:.875rem;
+  font-weight:600;
+  color:#4b5563; /* gray-600 */
+  transition: background .15s ease, color .15s ease;
+  white-space:nowrap;
+}
+.topnav-link:hover{
+  background:#f9fafb; /* gray-50 */
+  color:#111827;      /* gray-900 */
+}
+.topnav-link.active{
+  background:#ecfdf5; /* emerald-50 */
+  color:#047857;      /* emerald-700 */
+}
+.topnav-link.active i{
+  color:#059669;      /* emerald-600 */
+}
+
+/* Smooth small fade-in used by your compare form */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in{
+  animation: fadeIn .18s ease-out;
+}
+
+/* Chart container: keeps charts consistent height */
+.chart-container{
+  margin-top: 12px;
+  height: 120px;
+  position: relative;
+}
+.chart-container canvas{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Optional: secondary list spacing if you use it */
+.secondary-list:empty{
+  display:none;
+}
+.secondary-list{
+  margin-top: 10px;
+}
+

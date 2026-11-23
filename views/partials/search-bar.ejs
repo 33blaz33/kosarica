@@ -1,0 +1,40 @@
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-3">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">
+        <%= name %>
+    </h2>
+
+    <form id="add-product-form" class="relative">
+        <div class="flex flex-col sm:flex-row gap-3">
+            <div class="relative flex-grow">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                </div>
+
+                <input type="url" id="url-input" required
+                    placeholder="Prilepite URL izdelka (npr. https://mercatoronline.si/izdelek/1095083/cokolino-lino-500-g)"
+                    class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:ring-1 focus:ring-emerald-500 focus:outline-none" />
+            </div>
+
+            <button type="submit" id="btn-add"
+                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-emerald-600 hover:bg-emerald-700 transition-colors">
+                <i class="fa-solid fa-plus mr-2"></i> Dodaj
+            </button>
+        </div>
+
+        <p id="add-error" class="mt-2 text-sm text-red-600 hidden"></p>
+
+        <div class="mt-2 text-xs text-gray-400">
+            Podprte trgovine:
+            <a href="https://mercatoronline.si/izdelek/1095083/cokolino-lino-500-g" target="_blank"
+                style="text-decoration: underline;">Mercator</a>,
+            <a href="https://online.spar.si/p/cokolino-lino-podravka-500g-283471" target="_blank"
+                style="text-decoration: underline;">Spar</a>,
+            <a href="https://www.dm.si/lino-zitna-kasica-cokolino-baby-6m-p3856020211073.html" target="_blank"
+                style="text-decoration: underline;">DM</a>,
+            <a href="https://www.mimovrste.com/cisto-perilo/persil-gel-za-pranje-perila-universal-4-5-l-100-pranj" target="_blank"
+                style="text-decoration: underline;">Mimovrste</a>
+            <!--<a href="https://www.hofer.si/sl/p.lino-cokolino.000000000000310864.html?search=%C4%8Dokolino"
+                target="_blank" style="text-decoration: underline;">Hofer</a>-->
+        </div>
+    </form>
+</div>
