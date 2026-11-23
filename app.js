@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 const packageInfo = JSON.parse(fs.readFileSync(path.join(__dirname, "package.json"), "utf8"));
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 31876;
 app.locals.appVersion = packageInfo.version;
 
 app.use(cors());

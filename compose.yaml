@@ -4,10 +4,10 @@ services:
     restart: unless-stopped
     init: true
     ports:
-      - "31876:4000"
+      - "31876:31876"
     environment:
       NODE_ENV: production
-      PORT: "4000"
+      PORT: "31876"
       SESSION_SECRET: "REPLACE_WITH_A_LONG_RANDOM_SECRET"
       DB_HOST: "REPLACE_WITH_MYSQL_HOSTNAME_OR_IP"
       DB_USER: "REPLACE_WITH_DATABASE_USERNAME"
